@@ -8,8 +8,7 @@ Builds and packages a [Quorum](https://github.com/jpmorganchase/quorum) docker i
 
 ## Build instructions
 
-For ease of use, docker build command has been composed into a shell script.
-For users who are well versed with docker, please use /docker/dockerfile
+For ease of use, docker build command is composed into a shell script.
 
 ### If behind a proxy
 
@@ -18,3 +17,5 @@ Run `./buildQuorumImage.sh <proxy url/ip>`
 ### If no Proxy
 
 Run `./buildQuorumImage.sh`
+
+For users who are well versed with docker, please use /docker/dockerfile
