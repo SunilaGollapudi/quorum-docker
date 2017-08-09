@@ -22,9 +22,10 @@ RUN GO_RELEASE=go1.7.3.linux-amd64.tar.gz                                       
     rm -rf ${GO_RELEASE}                                                                && \
 
 # Clone Quorum and build binaries
-    # => Building from master
+    # => Building from 1.2.0
     git clone https://github.com/jpmorganchase/quorum.git                               && \
-    cd quorum                                                                           && \    
+    cd quorum                                                                           && \
+    git checkout tags/v1.2.0                                                            && \
     make all                                                                            && \
     # => Copy geth & bootnode binaries & Delete repo
     cp /quorum/build/bin/geth /usr/local/bin                                            && \
