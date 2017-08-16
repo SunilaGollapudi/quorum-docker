@@ -9,7 +9,7 @@ ENV PATH $PATH:/usr/local/go/bin
 
 # Install Pre Requisites
 RUN export http_proxy=$PROXY                                                            && \
-    export https_proxy $PROXY                                                           && \
+    export https_proxy=$PROXY                                                           && \
     GO_RELEASE=go1.7.3.linux-amd64.tar.gz                                               && \
     apt-get update                                                                      && \
     apt-get install -y wget software-properties-common git build-essential              && \
