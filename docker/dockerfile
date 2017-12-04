@@ -25,7 +25,7 @@ RUN export http_proxy=$PROXY                                                    
     # => Building from 1.2.0
     git clone https://github.com/jpmorganchase/quorum.git                               && \
     cd quorum                                                                           && \
-    git checkout tags/v1.2.0                                                            && \
+    git checkout tags/v2.0.0                                                            && \
     make all                                                                            && \
     # => Copy geth & bootnode binaries & Delete repo
     cp /quorum/build/bin/geth /usr/local/bin                                            && \
@@ -34,10 +34,10 @@ RUN export http_proxy=$PROXY                                                    
 
 # Install Constellation
 # Download version 0.1.0
-    wget https://github.com/jpmorganchase/constellation/releases/download/v0.1.0/constellation-0.1.0-ubuntu1604.tar.xz  && \
-    tar -xJf constellation-0.1.0-ubuntu1604.tar.xz                                                                      && \
-    mv ./constellation-0.1.0-ubuntu1604/* /usr/local/bin                                                                && \
-    cd / && rm -rf /constellation-0.1.0-ubuntu1604 && rm -rf ./constellation-0.1.0-ubuntu1604.tar.xz                    && \
+    wget https://github.com/jpmorganchase/constellation/releases/download/v0.2.0/constellation-0.2.0-ubuntu1604.tar.xz  && \
+    tar -xJf constellation-0.2.0-ubuntu1604.tar.xz                                                                      && \
+    mv ./constellation-0.2.0-ubuntu1604/* /usr/local/bin                                                                && \
+    cd / && rm -rf /constellation-0.2.0-ubuntu1604 && rm -rf ./constellation-0.2.0-ubuntu1604.tar.xz                    && \
 
 # Clean up
     apt-get remove --purge -y wget software-properties-common build-essential git $(apt-mark showauto)    && \
